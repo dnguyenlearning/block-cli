@@ -1,5 +1,5 @@
 {
-  "name": "@gridly/block-cli",
+  "name": "gridly-block-cli",
   "version": "0.0.1",
   "description": "Gridly cli tool to help you manage block",
   "author": "Duong Nguyen @dnguyenlearning",
@@ -23,6 +23,7 @@
     "@oclif/plugin-warn-if-update-available": "^2.0.37",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
+    "find-up": "^5.0.0",
     "fs-extra": "^11.1.1",
     "socket.io": "^4.6.1"
   },

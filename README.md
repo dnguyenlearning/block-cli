@@ -16,11 +16,11 @@ oclif example Hello World CLI
 
 <!-- usage -->
 ```sh-session
-$ npm install -g @gridly/block-cli
+$ npm install -g gridly-block-cli
 $ block-cli COMMAND
 running command...
 $ block-cli (--version)
-@gridly/block-cli/0.0.1 darwin-arm64 node-v18.15.0
+gridly-block-cli/0.0.1 darwin-arm64 node-v18.15.0
 $ block-cli --help [COMMAND]
 USAGE
   $ block-cli COMMAND
