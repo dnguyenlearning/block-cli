@@ -1,6 +1,6 @@
 export default {
   blockConfigFileName: "block.config.json",
-  blockYamlFileName: ".apitable.yml",
+  blockYamlFileName: ".gridly.yml",
   releaseCodeName: "block_bundle.js",
   releaseCodeProdName: "block_bundle.min.js",
   releaseCodePath: "./dist/packed/",

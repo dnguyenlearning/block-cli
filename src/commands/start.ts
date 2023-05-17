@@ -1,8 +1,9 @@
 import { Command, Flags } from "@oclif/core";
 import * as chalk from "chalk";
 import { IBlockCliSocket } from "../interface/socket";
-import { getBlockConfig } from "../utils/project";
+import { getBlockConfig, startCompile } from "../utils/project";
 import { CommandError } from "@oclif/core/lib/interfaces";
+import config from "../config";
 
 const log = console.log;
 
@@ -42,9 +43,36 @@ export class Start extends Command {
     const {
       flags: { port, protocol },
     } = await this.parse(Start);
+
     let firstCompile = true;
     const blockConfig = getBlockConfig();
 
-    log(chalk.blue("Hello world!"));
+    startCompile({
+      mode: "dev",
+      globalFlag: false,
+      webpackConfig: { entry: blockConfig.entry },
+      onSucceed: () => {
+        if (firstCompile) {
+          log(chalk.blue("************************"));
+          log(
+            chalk.yellowBright(`Current packageID: ${blockConfig.packageId}`)
+          );
+          log(
+            chalk.green(
+              "Copy the following address and paste it into the developing block container:"
+            )
+          );
+          log(
+            chalk.yellowBright(
+              `${protocol}://localhost:${port}/${config.releaseCodeName}`
+            )
+          );
+          log(chalk.blue("************************"));
+        } else {
+          log("Code has been recompiled");
+          // this.blockCliSocket?.liveReload();
+        }
+      },
+    });
   }
 }

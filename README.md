@@ -20,7 +20,7 @@ $ npm install -g gridly-block-cli
 $ block-cli COMMAND
 running command...
 $ block-cli (--version)
-gridly-block-cli/0.0.1 darwin-arm64 node-v18.15.0
+gridly-block-cli/0.0.2 darwin-arm64 node-v18.15.0
 $ block-cli --help [COMMAND]
 USAGE
   $ block-cli COMMAND
@@ -317,5 +317,5 @@ EXAMPLES
     Compiling...
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.1/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.2/dist/commands/start.ts)_
 <!-- commandsstop -->
