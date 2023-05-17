@@ -273,7 +273,7 @@ USAGE
   $ block-cli start [-p <value>] [-o <value>] [--debug]
 
 FLAGS
-  -o, --protocol=<value>  [default: https] Specifies the protocol of the local server
+  -o, --protocol=<value>  [default: http] Specifies the protocol of the local server
   -p, --port=<value>      [default: 9999] Specifies the port of the local server
   --debug                 Show debug information for cli it self
 
@@ -285,5 +285,5 @@ EXAMPLES
     Compiling...
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.4/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.5/dist/commands/start.ts)_
 <!-- commandsstop -->
