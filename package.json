@@ -1,6 +1,6 @@
 {
   "name": "gridly-block-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gridly cli tool to help you manage block",
   "author": "Duong Nguyen @dnguyenlearning",
   "bin": {
