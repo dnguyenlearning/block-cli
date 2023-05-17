@@ -285,5 +285,5 @@ EXAMPLES
     Compiling...
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.3/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.4/dist/commands/start.ts)_
 <!-- commandsstop -->
