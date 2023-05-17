@@ -1,5 +1,5 @@
 {
-  "name": "block-cli",
+  "name": "@gridly/block-cli",
   "version": "0.0.1",
   "description": "Gridly cli tool to help you manage block",
   "author": "Duong Nguyen @dnguyenlearning",

@@ -1,5 +1,4 @@
-oclif-hello-world
-=================
+# oclif-hello-world
 
 oclif example Hello World CLI
 
@@ -8,27 +7,30 @@ oclif example Hello World CLI
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
+* [oclif-hello-world](#oclif-hello-world)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
 ```sh-session
-$ npm install -g block-cli
+$ npm install -g @gridly/block-cli
 $ block-cli COMMAND
 running command...
 $ block-cli (--version)
-block-cli/0.0.0 darwin-arm64 node-v18.15.0
+@gridly/block-cli/0.0.1 darwin-arm64 node-v18.15.0
 $ block-cli --help [COMMAND]
 USAGE
   $ block-cli COMMAND
 ...
 ```
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`block-cli hello PERSON`](#block-cli-hello-person)
-* [`block-cli hello world`](#block-cli-hello-world)
 * [`block-cli help [COMMANDS]`](#block-cli-help-commands)
 * [`block-cli plugins`](#block-cli-plugins)
 * [`block-cli plugins:install PLUGIN...`](#block-cli-pluginsinstall-plugin)
@@ -39,46 +41,7 @@ USAGE
 * [`block-cli plugins:uninstall PLUGIN...`](#block-cli-pluginsuninstall-plugin-1)
 * [`block-cli plugins:uninstall PLUGIN...`](#block-cli-pluginsuninstall-plugin-2)
 * [`block-cli plugins update`](#block-cli-plugins-update)
-
-## `block-cli hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ block-cli hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `block-cli hello world`
-
-Say hello world
-
-```
-USAGE
-  $ block-cli hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ block-cli hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+* [`block-cli start`](#block-cli-start)
 
 ## `block-cli help [COMMANDS]`
 
@@ -332,4 +295,27 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
+
+## `block-cli start`
+
+Start current block project in develop mode
+
+```
+USAGE
+  $ block-cli start [-p <value>] [-o <value>] [--debug]
+
+FLAGS
+  -o, --protocol=<value>  [default: https] Specifies the protocol of the local server
+  -p, --port=<value>      [default: 9999] Specifies the port of the local server
+  --debug                 Show debug information for cli it self
+
+DESCRIPTION
+  Start current block project in develop mode
+
+EXAMPLES
+  $ block-cli start
+    Compiling...
+```
+
+_See code: [dist/commands/start.ts](https://github.com/dnguyenlearning/block-cli/blob/v0.0.1/dist/commands/start.ts)_
 <!-- commandsstop -->
