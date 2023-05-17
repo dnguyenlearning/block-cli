@@ -7,6 +7,11 @@ import { IWebpackConfig } from "../interface/webpack";
 import { getWebpackConfig } from "../webpack.config";
 import * as webpack from "webpack";
 
+export function getPackageJSON(rootDir?: string) {
+  rootDir = rootDir ?? findBlockRootDir();
+  return require(path.join(rootDir, "package.json"));
+}
+
 export function getBlockConfig(rootDir?: string): IBlockConfig {
   rootDir = rootDir ?? findBlockRootDir();
   return JSON.parse(

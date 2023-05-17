@@ -4,6 +4,7 @@ import { IBlockCliSocket } from "../interface/socket";
 import { getBlockConfig, startCompile } from "../utils/project";
 import { CommandError } from "@oclif/core/lib/interfaces";
 import config from "../config";
+import { hostCompliedFile } from "../utils/start";
 
 const log = console.log;
 
@@ -27,7 +28,7 @@ export class Start extends Command {
     protocol: Flags.string({
       char: "o",
       description: "Specifies the protocol of the local server",
-      default: "https",
+      default: "http",
     }),
     debug: Flags.boolean({
       description: "Show debug information for cli it self",
@@ -67,12 +68,20 @@ export class Start extends Command {
               `${protocol}://localhost:${port}/${config.releaseCodeName}`
             )
           );
+          firstCompile = false;
           log(chalk.blue("************************"));
         } else {
-          log("Code has been recompiled");
-          // this.blockCliSocket?.liveReload();
+          log(chalk.green("Recompiled successfully"));
+          this.blockCliSocket?.liveReload();
         }
       },
     });
+
+    try {
+      this.blockCliSocket = hostCompliedFile(port, protocol);
+      hostCompliedFile(String(Number(port) + 1), "http");
+    } catch (error) {
+      this.error(error as any);
+    }
   }
 }
