@@ -39,7 +39,7 @@
     "webpack": "^5.82.1"
   },
   "devDependencies": {
-    "@oclif/test": "^2.3.19",
+    "@oclif/test": "^2.3.22",
     "@types/chai": "^4",
     "@types/express": "^4.17.13",
     "@types/fs-extra": "^11.0.1",
